@@ -1,0 +1,17 @@
+{
+  "name": "mkques",
+  "description": "make questions",
+  "main": "app.js",
+  "authors": [
+    "jiwoopark"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

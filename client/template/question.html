@@ -1,0 +1,20 @@
+<h3>Question</h3>
+<div class="question">
+    <div class="row">
+        <div class="input-field">
+            <input type="text"/> 
+            <label for="question">Put your question in here!</label>
+        </div>
+        <div class="input-field right">
+             <input type="checkbox" class="filled-in" id="template" ng-model="needTemplate" />
+             <label for="template">I Need Template!</label>
+        </div>
+    </div>
+    <div class="chips"></div>
+
+    <div ng-show="needTemplate" class="row template center">
+        <div class="col s4" ng-repeat="tmpl in template">
+            <a href="" class="waves-effect waves-light btn">{{tmpl.typeStr}}</a>
+        </div>
+    </div>
+</div>

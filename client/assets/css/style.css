@@ -1,0 +1,110 @@
+/*
+ * Overall
+ */
+.semi_highlight{
+    font-weight: 400;
+}
+.highlight{
+    font-weight: 500;
+}
+.strong_highlight{
+    font-weight: 600;
+}
+.spacing{
+    margin-top: 15px;
+}
+/*
+ * Body
+ */
+body {
+    background: #f8f8f8;
+}
+.row .col{
+    padding : 0px;
+}
+.main_section{
+    border-left: 1px solid #9f1eb2;
+    height : 100%;
+    background: rgba(249, 255, 245, 0.5);
+    padding : 25px !important;
+}
+.main_section h3{
+    color : #9e9e9e;
+    font-weight: 300;
+    font-family: 'Roboto Slab', serif;
+}
+
+/*
+ * Navbar Style
+ */
+
+nav .brand-logo{
+    padding : 0px 25px;
+}
+
+/*
+ * sidebar
+ */
+.iconcard {
+    margin : 5px;
+    padding: 5px;
+    border : 1px solid #e8e8e8;
+    cursor : pointer;
+    transition : all 0.1s;
+}
+.iconcard:hover{
+    background: #F9FFF5;
+    border : 1px solid #9f1eb2;
+}
+.iconcard > img {
+    width : 100%;
+}
+.iconcard.active{
+    background: #F9FFF5;
+    border : 1px solid #9f1eb2;
+    border-right: none;
+    margin-right: 0px;
+    transform : translateX(1px);
+}
+
+/*
+ * Instruction tab
+ */
+.instruction{
+    padding: 30px;
+    padding-top: 0px;
+    font-weight: 300;
+}
+.cardslot{
+    padding: 10px;
+}
+.todolist{
+    padding: 10px;
+}
+.todolist ul{
+    line-height: 2;
+    padding-left : 20px;
+}
+.todolist ul li{
+    list-style: square;
+}
+
+
+/*
+ * Lecture tab
+ */
+.itemslot{
+    margin: 20px;
+}
+
+
+
+
+/*
+ * Question tab
+ */
+.question{
+    padding : 30px;
+}
+
+

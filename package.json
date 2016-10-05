@@ -1,0 +1,27 @@
+{
+  "name": "mkques",
+  "version": "1.0.0",
+  "description": "make questions",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jiwoopark",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^1.0.0-beta.2",
+    "bower": "^1.7.9",
+    "express": "^4.14.0",
+    "materialize-tags": "^1.0.0",
+    "mongodb": "^2.2.10"
+  },
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0",
+    "gulp": "^3.9.1",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
