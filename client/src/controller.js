@@ -5,11 +5,20 @@ let ctrl = {
         console.log("testCtrl");
     },
     // main page
-    mainCtrl($scope){
+    mainCtrl($scope, $location){
         // main Controller 
+        let tabList = [
+            "instruction",
+            "lectureList",
+            "question",
+            "discuss"
+        ]
+        $scope.tabList = tabList;
         angular
         .element(document)
         .ready(function(){
+            $scope.curTab = $location.url().split('/')[2];
+            console.log($scope.curTab);
             $(".iconcard").click(function(){
                 $(".iconcard").removeClass("active");
                 $(this).addClass("active");
@@ -17,8 +26,14 @@ let ctrl = {
             
         });
     },
-    lectureCtrl($scope){
-        
+    lectureListCtrl($scope, $http){
+        let getLectures = function(){
+            $http.get('/lecture')
+                 .then(function(response){
+                    $scope.lectures = response.data;
+                 });
+        }
+        getLectures();
     },
     questionCtrl($scope, $http){
         let getTemplate = function(){
@@ -29,17 +44,29 @@ let ctrl = {
         };
         let chipFunc = function(){
             $('.chips').material_chip();
-            $('.chips-initial').material_chip({
-                
-            });
-            $('.chips-placeholder').material_chip({
-               placeholder: 'Enter a tag',
-               secondaryPlaceholder: '+tag'
-            });
         }
         chipFunc();
         getTemplate();
     },
-    discussCtrl(){}
+    discussCtrl(){},
+
+    currentLectureCtrl(){
+
+    },
+
+    loginCtrl(){
+        console.log(1);    
+    },
+    signupCtrl($scope, $http){
+        let signup = function(user){
+            $http.post('signup', user)
+                 .then(function(){
+                     console.log(data);
+                 });
+        };
+        $scope.signup = signup;
+    }
+
+
 }
 module.exports = ctrl;

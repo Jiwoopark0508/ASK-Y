@@ -17,5 +17,11 @@ module.exports = {
     },
     template() {
         return _db.collection('template');
+    },
+    lectures(){
+        return _db.collection('lecture');
+    },
+    user(){
+        return _db.collection('user');
     }
 }

@@ -10,11 +10,14 @@
              <label for="template">I Need Template!</label>
         </div>
     </div>
-    <div class="chips"></div>
+    <label for="questionTags">Enter your question tag in here! (Do Press Enter!)</label>
+    <div id ="questionTags" class="chips"></div>
+
 
     <div ng-show="needTemplate" class="row template center">
         <div class="col s4" ng-repeat="tmpl in template">
-            <a href="" class="waves-effect waves-light btn">{{tmpl.typeStr}}</a>
+            <input type="radio" id="{{tmpl.typeStr}}" name="tmpl" ng-model="template" value="" />
+            <label for="{{tmpl.typeStr}}">{{tmpl.typeStr}}</label>
         </div>
     </div>
 </div>
